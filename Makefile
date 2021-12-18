@@ -62,7 +62,7 @@ END		=	\e[0m
 ## help	Golang-Piscine 자동화 메이크 파일의 기능을 설명합니다.
 ## 
 help:	
-			@sed -ne '/@sed/!s/## //p' Makefile
+			@sed -n '/@sed/!s/## //p' Makefile
 
 ## build	도커 이미지를 build 합니다. build시 Minor 버전이 1 증가합니다.(빌드 후 적용됨)
 ## 
