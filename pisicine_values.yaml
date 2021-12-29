@@ -1,0 +1,23 @@
+global:
+  edition: ee # gitlab enterprise 버전(무료로 사용시 자동으로 ce로 변경됨)
+  hosts:
+    domain: $PISCINE_DOMAIN # 피신 페이지 도메인
+    externalIP: $PISCINE_IP # kuberntest external ip
+    gitlab:
+      name: $PISCINE_GITLAB_NAME # gitlab.$PISCINE_DOMAIN
+      https: true
+    registry:
+      name: $PISICNE_REGISTRY_NAME # registry.$PISCINE_DOMAIN
+      https: true
+    minio:
+      name: $PISICINE_MINIO_NAME #minio.$PISCINE_DOMAIN
+      https: true
+  ingress:
+    configureCertmanager: false
+    class: "nginx"
+    tls:
+      enabled: true
+certmanager:
+  install: false
+nginx-ingress:
+  enabled: false
